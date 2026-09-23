@@ -18,94 +18,78 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
             min-height: 100vh;
-            padding: 40px 15px;
         }
 
-        .header-profile {
+        .container {
+            width: 100%;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 35px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff7700;
+            object-fit: cover;
+            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(255, 119, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #ff7700;
+            margin: 15px 0 25px 0;
             text-align: center;
         }
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ff6b00;
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
-            margin-bottom: 15px;
-        }
-
-        .profile-name {
-            color: #ff6b00;
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
-        }
-
         .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(145deg, #ff8c00, #e65c00);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
-            transition: transform 0.2s ease;
-        }
-
-        .telegram-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .apps-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            background: linear-gradient(135deg, #ff7700, #ff5500);
+            color: white;
             width: 100%;
-            max-width: 500px;
-            background-color: #1a1a1a;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
-        .app-item {
+        .app-card {
+            background-color: #1e1e1e;
+            width: 100%;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: #ffffff;
-            gap: 20px;
-            padding: 10px;
-            border-radius: 15px;
-            transition: background 0.3s ease;
-        }
-
-        .app-item:hover {
-            background-color: #252525;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a2a2a;
         }
 
         .app-circle {
-            width: 100px;
-            height: 100px;
-            min-width: 100px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
-            background: #ffffff;
-            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid #ff6b00;
+            border: 2px solid #ff7700;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2a2a2a;
+            flex-shrink: 0;
         }
 
         .app-circle img {
@@ -115,37 +99,40 @@
         }
 
         .app-details {
+            margin-right: 15px;
             display: flex;
             flex-direction: column;
         }
 
         .app-title {
-            font-size: 1.4rem;
+            font-size: 20px;
             font-weight: bold;
-            color: #ff6b00;
+            color: #ff7700;
+            margin-bottom: 5px;
         }
 
         .download-hint {
-            font-size: 0.95rem;
-            color: #ff8c00;
-            margin-top: 4px;
+            font-size: 14px;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-profile">
-        <img src="FB_IMG_1790162292059.jpg" alt="حسام شبكتي" class="profile-img">
-        <h1 class="profile-name">حسام شبكتي</h1>
-        <a href="https://t.me/s/hussam_mohamad2000" target="_blank" class="telegram-btn">
-            انضم لقناتنا على التليجرام ✈️
-        </a>
-    </div>
+    <div class="container">
+        <!-- الصورة الشخصية -->
+        <img src="profile.jpg" alt="صورة الحساب" class="profile-pic">
+        
+        <!-- العنوان -->
+        <h1>حسام شبكتي</h1>
 
-    <div class="apps-container">
+        <!-- زر التليجرام -->
+        <a href="https://t.me/hussamanwar2000" class="telegram-btn">
+            ✈️ انضم لقناتنا على التليجرام
+        </a>
 
         <!-- تطبيق Yacine TV -->
-        <a href="Yacine_TV_blue.apk" class="app-item">
+        <a href="Yacine_TV_blue.apk" class="app-card">
             <div class="app-circle">
                 <img src="yacine-tv.png" alt="Yacine TV">
             </div>
@@ -156,7 +143,7 @@
         </a>
 
         <!-- تطبيق Movie Box -->
-        <a href="Movie_Box.apk" class="app-item">
+        <a href="Movie_Box.apk" class="app-card">
             <div class="app-circle">
                 <img src="moviebox.png" alt="Movie Box">
             </div>
