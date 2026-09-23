@@ -18,78 +18,94 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
             min-height: 100vh;
+            padding: 40px 15px;
         }
 
-        .container {
-            width: 100%;
-            max-width: 480px;
+        .header-profile {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #ff7700;
-            object-fit: cover;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(255, 119, 0, 0.4);
-        }
-
-        h1 {
-            font-size: 28px;
-            color: #ff7700;
-            margin: 15px 0 25px 0;
+            margin-bottom: 35px;
             text-align: center;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff6b00;
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            color: #ff6b00;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
         }
 
         .telegram-btn {
-            background: linear-gradient(135deg, #ff7700, #ff5500);
-            color: white;
-            width: 100%;
-            padding: 15px;
-            border-radius: 30px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
-            display: flex;
-            justify-content: center;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            background: linear-gradient(145deg, #ff8c00, #e65c00);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            transition: transform 0.2s ease;
         }
 
-        .app-card {
-            background-color: #1e1e1e;
+        .telegram-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .apps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             width: 100%;
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
+            max-width: 500px;
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .app-item {
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            border: 1px solid #2a2a2a;
+            color: #ffffff;
+            gap: 20px;
+            padding: 10px;
+            border-radius: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .app-item:hover {
+            background-color: #252525;
         }
 
         .app-circle {
-            width: 65px;
-            height: 65px;
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
             border-radius: 50%;
-            border: 2px solid #ff7700;
-            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: #2a2a2a;
-            flex-shrink: 0;
+            justify-content: center;
+            border: 3px solid #ff6b00;
+            overflow: hidden;
         }
 
         .app-circle img {
@@ -99,40 +115,37 @@
         }
 
         .app-details {
-            margin-right: 15px;
             display: flex;
             flex-direction: column;
         }
 
         .app-title {
-            font-size: 20px;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #ff7700;
-            margin-bottom: 5px;
+            color: #ff6b00;
         }
 
         .download-hint {
-            font-size: 14px;
-            color: #aaaaaa;
+            font-size: 0.95rem;
+            color: #ff8c00;
+            margin-top: 4px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- الصورة الشخصية -->
-        <img src="profile.jpg" alt="صورة الحساب" class="profile-pic">
-        
-        <!-- العنوان -->
-        <h1>حسام شبكتي</h1>
-
-        <!-- زر التليجرام -->
-        <a href="https://t.me/hussamanwar2000" class="telegram-btn">
-            ✈️ انضم لقناتنا على التليجرام
+    <div class="header-profile">
+        <img src="FB_IMG_1790162292059.jpg" alt="حسام شبكتي" class="profile-img">
+        <h1 class="profile-name">حسام شبكتي</h1>
+        <a href="https://t.me/s/hussam_mohamad2000" target="_blank" class="telegram-btn">
+            انضم لقناتنا على التليجرام ✈️
         </a>
+    </div>
+
+    <div class="apps-container">
 
         <!-- تطبيق Yacine TV -->
-        <a href="Yacine_TV_blue.apk" class="app-card">
+        <a href="Yacine_TV_blue.apk" class="app-item">
             <div class="app-circle">
                 <img src="yacine-tv.png" alt="Yacine TV">
             </div>
@@ -143,7 +156,7 @@
         </a>
 
         <!-- تطبيق Movie Box -->
-        <a href="Movie_Box.apk" class="app-card">
+        <a href="Movie_Box.apk" class="app-item">
             <div class="app-circle">
                 <img src="moviebox.png" alt="Movie Box">
             </div>
