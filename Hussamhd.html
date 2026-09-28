@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDMOSUL STORE</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        /* الهيدر والعنوان */
+        .header-box {
+            background: #fff;
+            border: 2px solid #ffcc00;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0044aa;
+            margin: 5px 0;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #444;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        /* صندوق الوقت والتاريخ والآية */
+        .info-card {
+            background: #fffdf5;
+            border: 2px solid #ffcc00;
+            border-radius: 30px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .time-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0044aa;
+        }
+        .date-box {
+            background: #fdf5e6;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        .quran-text {
+            font-size: 15px;
+            color: #003366;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        /* بطاقات التطبيقات */
+        .app-card {
+            background: #fff;
+            border: 2px solid #ffcc00;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .app-title {
+            color: #0044aa;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .app-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        /* الأزرار */
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background-color: #0055aa;
+            color: white;
+            text-decoration: none;
+            padding: 12px 0;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            box-sizing: border-box;
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #003388;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- رأس الصفحة -->
+        <div class="header-box">
+            <h1>HDMOSUL STORE</h1>
+            <div class="subtitle">HALA MADRID • VIP 🏆 • EXCLUSIVE 👑</div>
+        </div>
+
+        <!-- صندوق الوقت والتاريخ والآية -->
+        <div class="info-card">
+            <div class="time-text" id="clock">--:--:--</div>
+            <div class="date-box" id="date">--</div>
+            <div class="quran-text">⚽ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ⚽</div>
+        </div>
+
+        <!-- تطبيق الباشا -->
+        <div class="app-card">
+            <div class="app-title">تطبيق الباشا</div>
+            <div class="app-desc">مباشر وأفلام • أضف كود التفعيل هنا إن وجد</div>
+            <a href="ضع_رابط_تحميل_الباشا_هنا" class="btn-primary">تحميل التطبيق</a>
+        </div>
+
+        <!-- تطبيق ريزن -->
+        <div class="app-card">
+            <div class="app-title">تطبيق ريزن (Rezon)</div>
+            <div class="app-desc">بث مباشر ومحتوى متنوع • أضف تفاصيل الكود هنا</div>
+            <a href="ضع_رابط_تحميل_ريزن_هنا" class="btn-primary">تحميل التطبيق</a>
+        </div>
+
+        <!-- تطبيق الأسطورة -->
+        <div class="app-card">
+            <div class="app-title">تطبيق الأسطورة TV</div>
+            <div class="app-desc">رياضة وسينما • أضف كود التفعيل هنا</div>
+            <a href="ضع_رابط_تحميل_الأسطورة_هنا" class="btn-primary">تحميل التطبيق</a>
+        </div>
+    </div>
+
+    <script>
+        // دالة لتحديث الوقت والتاريخ تلقائياً
+        function updateDateTime() {
+            const now = new Date();
+            
+            // الوقت
+            document.getElementById('clock').innerText = now.toLocaleTimeString('en-US', {hour12: false});
+            
+            // التاريخ بالعربي
+            const options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' };
+            document.getElementById('date').innerText = now.toLocaleDateString('ar-IQ', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+
+</body>
+</html>
