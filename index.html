@@ -11,7 +11,6 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background-color: #121212;
             color: #ffffff;
@@ -21,151 +20,71 @@
             min-height: 100vh;
             padding: 40px 15px;
         }
-
-        .header-profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 35px;
+        h1 {
+            font-size: 26px;
+            margin-bottom: 30px;
+            color: #ff9800;
             text-align: center;
         }
-
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ff6b00;
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
-            margin-bottom: 15px;
-        }
-
-        .profile-name {
-            color: #ff6b00;
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
-        }
-
-        .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(145deg, #ff8c00, #e65c00);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
-            transition: transform 0.2s ease;
-        }
-
-        .telegram-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .apps-container {
+        .container {
+            width: 100%;
+            max-width: 450px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            max-width: 500px;
-            background-color: #1a1a1a;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            gap: 15px;
         }
-
-        .app-item {
+        .app-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 18px 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            text-decoration: none;
-            color: #ffffff;
-            gap: 20px;
-            padding: 10px;
-            border-radius: 15px;
-            transition: background 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
-
-        .app-item:hover {
-            background-color: #252525;
-        }
-
-        .app-circle {
-            width: 100px;
-            height: 100px;
-            min-width: 100px;
-            border-radius: 50%;
-            background: #ffffff;
-            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid #ff6b00;
-            overflow: hidden;
-        }
-
-        .app-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .app-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .app-title {
-            font-size: 1.4rem;
+        .app-name {
+            font-size: 18px;
             font-weight: bold;
-            color: #ff6b00;
+            color: #ffffff;
         }
-
-        .download-hint {
-            font-size: 0.95rem;
-            color: #ff8c00;
-            margin-top: 4px;
+        .download-btn {
+            background-color: #ff9800;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background-color 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #f57c00;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-profile">
-        <img src="FB_IMG_1790162292059.jpg" alt="حسام شبكتي" class="profile-img">
-        <h1 class="profile-name">حسام شبكتي</h1>
-        <a href="https://t.me/s/hussam_mohamad2000" target="_blank" class="telegram-btn">
-            انضم لقناتنا على التليجرام ✈️
-        </a>
-    </div>
+    <h1>تطبيقات حسام المختارة</h1>
 
-    <div class="apps-container">
+    <div class="container">
+        <!-- تطبيق الباشا -->
+        <div class="app-card">
+            <span class="app-name">تطبيق الباشا</span>
+            <a href="رابط_تحميل_الباشا" class="download-btn">تحميل</a>
+        </div>
 
-        <!-- تطبيق Yacine TV -->
-        <a href="Yacine_TV_blue.apk" class="app-item">
-            <div class="app-circle">
-                <img src="yacine-tv.webp" alt="Yacine TV">
-            </div>
-            <div class="app-details">
-                <div class="app-title">Yacine TV</div>
-                <div class="download-hint">تحميل مباشر</div>
-            </div>
-        </a>
+        <!-- تطبيق ريزن -->
+        <div class="app-card">
+            <span class="app-name">تطبيق ريزن</span>
+            <a href="رابط_تحميل_ريزن" class="download-btn">تحميل</a>
+        </div>
 
-        <!-- تطبيق Cinemana -->
-        <a href="https://www.mediafire.com/file/7cnmatdqx37odh4/cinemana_5.3.3.apk/file" target="_blank" class="app-item">
-            <div class="app-circle">
-                <img src="cinemana.png" alt="Cinemana">
-            </div>
-            <div class="app-details">
-                <div class="app-title">Cinemana</div>
-                <div class="download-hint">تحميل ميديافاير</div>
-            </div>
-        </a>
-
+        <!-- تطبيق الأسطورة -->
+        <div class="app-card">
+            <span class="app-name">تطبيق الأسطورة</span>
+            <a href="رابط_تحميل_الأسطورة" class="download-btn">تحميل</a>
+        </div>
     </div>
 
 </body>
